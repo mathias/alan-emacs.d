@@ -79,7 +79,8 @@
       auto-indent-modes '(ruby-mode
                           java-mode
                           javascript-mode
-                          emacs-lisp-mode))
+                          emacs-lisp-mode
+                          lisp-mode))
 
 (setq-default tab-width 2
               indent-tabs-mode nil
@@ -231,6 +232,10 @@
 ;;
 ;; key bindings
 ;;
+
+(global-set-key (kbd "s-+") 'increase-font-size)
+(global-set-key (kbd "s-=") 'increase-font-size)
+(global-set-key (kbd "s--") 'decrease-font-size)
 
 (global-set-key (kbd "C-+") 'increase-font-size)
 (global-set-key (kbd "C--") 'decrease-font-size)
@@ -435,3 +440,7 @@
     "The insult of an enemy is better then the flattery of a friend."
     "Law of Cybernetic Entomology: There's always one more bug.")
   "Scientifically-proven optimal words of hackerish encouragement.")
+
+;; Flyspell settings
+(setq ispell-program-name "aspell")
+(add-to-list 'exec-path "/usr/local/bin")
